@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    overflow: hidden;
+}
+html{
+    font-size: 10px;
+}
+body{
+    overflow: hidden;
+    position: relative;
+}
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(bg.webp);
+    overflow: hidden;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+   
+}
+
+.login,.register{
+    width:35rem ;
+    height: 45rem;
+    padding-top: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+.login{
+    z-index: 1;
+    background-color: white;
+    
+}
+.register{
+    background-color: rgb(255, 255, 255,0.2);
+    margin-left: -150px;
+    z-index: 0;
+    width: 30rem;
+    height: 40rem;
+    text-align: center;
+    
+}
+.register2{
+    width: 35rem;
+    height: 58rem;
+    margin-left: -150px;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+   animation: flip 1s linear;
+   z-index: 0;
+   text-align: center;
+   padding-top: 10px;
+   overflow: hidden;
+   
+
+}
+
+@keyframes flip{
+    50%{
+        transform: translateX(180px);
+    }
+}
+
+.login2{
+    margin-left: 150px;
+    border-radius: 20px;
+    background-color: white;
+   animation: flip2 1s linear;
+   z-index: 0;
+   overflow: hidden;
+   text-align: center;
+   padding-top: 10px;
+
+}
+@keyframes flip2{
+    50%{
+        transform: translateX(-180px);
+    }
+}
+
+/*-----------------login page fields--------------*/
+
+#log,#log2{
+    font-size: 30px;
+    
+    font-weight: bolder;
+}
+#log2{
+    margin-top: 110%;
+    margin-left: 50%;
+}
+#des,#des2,#des3{
+    font-size: 13px;
+    margin-left: -53%;
+}
+.inputs{
+    width: 25rem;
+    height: 3rem;
+    outline: none;
+    border-style: none none solid none ;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255,0);
+}
+.inputs:hover{
+    transform: scale(1.1);
+    animation: field 1s infinite;
+}
+@keyframes field{
+    50%{
+        border-color:rgb(56, 255, 56);
+    }
+}
+.btn{
+    width: 25rem;
+    height: 4rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    transition: 1s;
+    background: linear-gradient(to right,#49c3fc 15%,rgb(87, 188, 255),rgb(210, 13, 254) ,rgb(238, 4, 250) );
+}
+.btn:hover{
+    animation: left 5s infinite;
+    transform: scale(1.05); 
+    transition: 0.5s;
+    
+}
+
+/*------------bubbles----------------------*/
+
+.bubble1,.bubble2{
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    background-color: red;
+    z-index: 0;
+    border-radius: 200px;
+    
+    
+}
+.bubble1{
+    top: 80%;
+    left: -10%;
+    background-color: #52c8ff;
+}
+.bubble2{
+    top:- 80%;
+    left: 93%;
+    background-color: rgb(212, 39, 243);
+}
+@keyframes floater{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(5);
+    }
+}
+@keyframes floater2{
+    0%{
+        transform: scale(5);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
